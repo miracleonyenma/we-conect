@@ -1,0 +1,34 @@
+.messaging {
+  width: 100%;
+  max-width: 600px;
+}
+
+.messaging .message {
+  background-color: white;
+  min-height: calc(100vh - 50px);
+}
+
+.messaging .message__searchPal {
+  margin-bottom: 15px;
+}
+ 
+.messaging .message__searchPalImage {
+  width: 8vw;
+  height: 8vw;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.messaging .chat__head img {
+  width: 8vw;
+  height: 8vw;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+@media(min-width: 500px) {
+  .messaging .message {
+    min-height: 100vh;
+    padding-bottom: 20px;
+  }
+}

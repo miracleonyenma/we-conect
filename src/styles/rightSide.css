@@ -1,0 +1,40 @@
+.rightSide{
+  display: none;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+  max-width: 350px;
+  min-width: 250px;
+}
+
+.navIcons{
+  margin-top: 1rem;
+  display: none;
+  justify-content: space-between;
+}
+
+.navIcons>img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.r-button{
+  height: 3rem;
+  width: 100%;
+  align-self: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+@media(min-width: 850px) {
+  .rightSide {
+    display: flex;
+  }
+}
+
+@media(min-width: 1024px) {
+  .rightSide {
+    flex: 30%;
+    width: unset;
+  }
+}

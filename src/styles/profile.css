@@ -1,0 +1,39 @@
+.profile {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+.profile__left {
+  position: sticky;
+  top: 10px;
+  flex: 30%;
+  height: fit-content;
+  display: none;
+  max-width: 350px;
+}
+
+.profile .followCard {
+  margin-top: 0;
+}
+
+.profile__left + div {
+  max-width: 600px;
+}
+
+@media(min-width: 500px) {
+  .profile {
+    margin-top: 10px;
+  }
+
+  .profile__left + div {
+    margin-right: 10px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .profile__left {
+    display: block;
+  }
+}
