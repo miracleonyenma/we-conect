@@ -7,7 +7,7 @@
 .app {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: .5rem;
 }
 
 .logo h1 {
@@ -43,10 +43,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: .25rem .75rem;
   color: white;
   border: none;
   background-color: var(--p-color1);
-  border-radius: 5px;
+  border-radius: .5rem;
 }
 
 .button:hover{

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../styles/post.css'
+import { formatNumber } from '../modules/formatNumber'
 
 const Post = ({
   name,  
@@ -48,7 +49,7 @@ const Post = ({
       <div className="postReact">
         <span>
           <img src={liked? '/assets/like.png': '/assets/notlike.png'} alt="" />
-          {likes}
+          {formatNumber(likes)}
         </span>
         <span onClick={() => setOpenComment(!openComment)}>
           <img src='/assets/comment.png' alt="" />
