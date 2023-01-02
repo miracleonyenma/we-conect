@@ -1,10 +1,14 @@
-.followCard{
+.followCard__cont {
   width: 100%;
-  border-radius: 0.7rem;  
+  padding: 0.5rem;
+}
+
+.followCard {
+  width: 100%;
+  border-radius: 0.7rem;
   background-color: white;
   padding: 10px;
-  margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 
 .followCard__list {
@@ -25,17 +29,31 @@
 
 .followCard__head {
   display: flex;
-  border-bottom: 1px solid var(--p-color8);
+  background: var(--p-color8);
+  border-radius: 0.5rem;
+  padding: 0.35rem;
+  gap: 0.35rem;
+  /* border-bottom: 1px solid var(--p-color8); */
 }
 
-.followCard__head span {
+.followCard__head > span {
   text-align: center;
-  padding: 10px 0;
+  padding: .5rem;
   cursor: pointer;
   flex: 50%;
+  border-radius: 0.35rem;
+  border: 1px solid transparent;
 }
 
-.followCard__follow{
+.followCard__head .tag {
+  margin: 0 0.25rem;
+  font-weight: 600;
+  background: var(--p-color10);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.followCard__follow {
   display: flex;
   align-items: center;
   justify-content: space-between;

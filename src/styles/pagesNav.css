@@ -18,8 +18,9 @@
   justify-content: space-around;
   align-items: center;
   background-color: var(--p-color10);
-  padding: 5px 0;
+  padding: 1rem .25rem .25rem .25rem;
   height: 50px;
+  border-radius: 1rem;
 }
 
 .pagesNav__Icon {
@@ -43,7 +44,8 @@
 }
 
 .addPost {
-  border-radius: 100%;
+  display: flex;
+  border-radius: .75rem;
   padding: 10px;
   background-color: var(--p-color1);
   color: white;
