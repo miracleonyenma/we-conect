@@ -1,5 +1,5 @@
 import FollowersCard from "./FollowCard";
-import MiniprofileCard from "./MiniProfileCard";
+// import MiniprofileCard from "./MiniProfileCard";
 import "../styles/leftSide.css";
 import { Link } from "react-router-dom";
 import ProfileCard from "./ProfileCard";
