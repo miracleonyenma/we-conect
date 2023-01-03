@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState } from "react";
 import { Followers } from "../Data/FollowersData";
 import "../styles/message.css";
 import { EmailOutlined, Search, KeyboardArrowLeft } from "@mui/icons-material";

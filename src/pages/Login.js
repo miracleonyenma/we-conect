@@ -1,14 +1,7 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/auth.css";
 
 export default function Login() {
-  // Remove the page navigation from the login page
-  useEffect(() => {
-    const pageNav = document.getElementById("pageNav");
-    pageNav.style.display = "none";
-  }, []);
-
   return (
     <section className="auth-section">
       {/* <div className="a-right">
@@ -36,7 +29,6 @@ export default function Login() {
         <div>
           <span style={{ fontSize: "12px" }}>
             Don't have an account <Link to='/signup'>SignUp</Link>
-
           </span>
           <button className="button infoButton">
             Login

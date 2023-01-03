@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import FollowCard from '../components/FollowCard'
+import PagesNav from '../components/PagesNav'
 import '../styles/follow.css'
 
-export default function Follow() {
+export default function Follow({setModalOpened}) {
 
   const [pathname, setPathname] = useState('')
   
@@ -14,7 +15,9 @@ export default function Follow() {
 
   return (
     <div className='follow'>
+      <PagesNav rotate={true} setModalOpened={setModalOpened}/>
       <FollowCard pathname={pathname}/>
+      <PagesNav />
     </div>
   )
 }

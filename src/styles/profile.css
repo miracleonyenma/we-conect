@@ -23,12 +23,15 @@
 }
 
 @media(min-width: 500px) {
-  .profile {
-    margin-top: 10px;
-  }
 
   .profile__left + div {
     /* margin-right: 10px; */
+  }
+}
+
+@media(min-width: 850px) {
+  .profile {
+    max-width: unset;
   }
 }
 

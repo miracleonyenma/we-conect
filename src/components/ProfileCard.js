@@ -43,6 +43,9 @@ export default function ProfileCard({
             </Link>
           </div>
         </div>
+        {showProfileBtn &&
+          <Link to='/profile'>View Profile</Link>
+        }
       </div>
     </div>
   );
