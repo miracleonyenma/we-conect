@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--p-color10);
+  background-color: var(--p-color8);
   padding: 1rem .25rem .25rem .25rem;
   height: 50px;
   border-radius: 1rem;
