@@ -3,7 +3,9 @@
   flex-direction: column;
   padding: 1rem;
   background-color: var(--cardColor);
-  gap: 10px;
+  border: 1px solid rgb(228, 228, 228);
+  gap: 1rem;
+  border-radius: 1rem;
 }
 
 .post__head > img {
@@ -34,19 +36,28 @@
   width: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 0.5rem;
 }
 
 .postReact {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: .25rem;
 }
 
 .postReact > span {
   display: flex;
   align-items: center;
   gap: 5px;
+  background: #f3f3f3;
+  padding: .35rem .5rem;
+  border-radius: .5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.postReact img {
+  width: 1.25rem;
 }
 
 .post__detail {
@@ -74,16 +85,16 @@
   position: relative;
 }
 
-.post__comment > div{
+.post__comment > div {
   font-size: 14px;
 }
 
-.post__comment > div span:nth-child(2){
+.post__comment > div span:nth-child(2) {
   color: var(--p-color4);
 }
 
 .post__comment > div span:nth-child(1)::after {
-  content: '.';
+  content: ".";
   position: absolute;
   top: -4px;
   padding-left: 3px;
@@ -137,8 +148,8 @@
   color: var(--p-color1);
 }
 
-@media(min-width: 500px) {
+/* @media (min-width: 500px) {
   .post {
     border-radius: 10px;
   }
-}
+} */

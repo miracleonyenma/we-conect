@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  gap: 20px;
+  gap: 0;
   width: 100%;
   justify-content: center;
 }
@@ -28,7 +28,7 @@
   }
 
   .profile__left + div {
-    margin-right: 10px;
+    /* margin-right: 10px; */
   }
 }
 

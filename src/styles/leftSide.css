@@ -13,3 +13,8 @@
     flex: 30%;
   }
 }
+
+.leftSide__wrapper {
+  position: sticky;
+  top: 0;
+}
