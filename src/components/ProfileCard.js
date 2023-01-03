@@ -11,7 +11,7 @@ export default function ProfileCard({
   relationship,
   following,
   followers,
-  showProfileBtn
+  showProfileBtn,
 }) {
   return (
     <div className="profileCard__cont">
@@ -43,9 +43,13 @@ export default function ProfileCard({
             </Link>
           </div>
         </div>
-        {showProfileBtn &&
-          <Link to='/profile'>View Profile</Link>
-        }
+        {showProfileBtn && (
+          <div className="action-cont">
+            <Link to="/profile" style={{textDecoration: "none"}}>
+              <button className="button">View profile</button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
