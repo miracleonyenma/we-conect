@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--p-color8);
+  background-color: var(--primary45);
   padding: 1rem .25rem .25rem .25rem;
   height: 50px;
   border-radius: 1rem;
@@ -34,8 +34,8 @@
   width: 25px;
   height: 25px;
   margin-bottom: 3px;
-  color: var(--p-color1);
-  stroke: var(--p-color8);
+  color: var(--primary400);
+  stroke: var(--primary400);
   stroke-width: 1;
 }
 
@@ -47,7 +47,7 @@
   display: flex;
   border-radius: .75rem;
   padding: 10px;
-  background-color: var(--p-color1);
+  background-color: var(--primary400);
   color: white;
 }
 

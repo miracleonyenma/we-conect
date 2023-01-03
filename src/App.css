@@ -68,6 +68,10 @@
   box-shadow: 0 0 0 rgba(0, 37, 77, .24);
 }
 
+.icon.MuiSvgIcon-root {
+  fill: var(--primary400);
+}
+
 @media (min-width: 1024px) {
   .app {
     /* width: 95%; */
