@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Feed from '../components/Feed'
 import FollowCard from '../components/FollowCard'
+import PagesNav from '../components/PagesNav'
 import ProfileCard from '../components/ProfileCard'
 import RightSide from '../components/RightSide'
 import ShareModal from '../components/ShareModal'
@@ -15,6 +16,7 @@ export default function Profile({setModalOpened, modalOpened}) {
 
   return (
     <div className='profile'>
+      <PagesNav rotate={true} setModalOpened={setModalOpened} />
       <div className='profile__left'>
         <Link to='/' className='logo'><h1>weConect</h1></Link>
         <FollowCard />
@@ -35,6 +37,7 @@ export default function Profile({setModalOpened, modalOpened}) {
       </div>
       <RightSide setModalOpened={setModalOpened} />
       <ShareModal modalOpened={modalOpened} setModalOpened={setModalOpened} /> 
+      <PagesNav/>
     </div>
   )
 }

@@ -6,19 +6,6 @@
   width: 100%;
 }
 
-@media(min-width: 500px) {
-  .home {
-    /* margin-right: 10px; */
-    max-width: 600px;
-  }
-}
-
-@media(min-width: 850px) {
-  .home {
-    max-width: unset;
-  }
-}
-
 @media(min-width: 1024px) {
   .home {
     max-width: unset;

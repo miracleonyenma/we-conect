@@ -23,10 +23,6 @@
 }
 
 @media(min-width: 500px) {
-  .profile {
-    margin-top: 10px;
-    max-width: 600px;
-  }
 
   .profile__left + div {
     /* margin-right: 10px; */

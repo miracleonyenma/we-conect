@@ -16,7 +16,7 @@ import { useEffect, useState } from 'react';
 function PagesNav({rotate=false, setModalOpened}) {
 
   const [locationChanged, setLocationChanged] = useState(false)
-  const [pathname, setPathname] = useState('')
+  const [pathname, setPathname] = useState(null)
 
   // get the URL pathname and set in the state
   useEffect(() => {
@@ -30,14 +30,16 @@ function PagesNav({rotate=false, setModalOpened}) {
   useEffect(() => {
     const pageNav = document.querySelector(".pageNavAlt")
     const initialWindowHeight = window.innerHeight
-    if('visualViewport' in window) {
-      window.visualViewport.addEventListener('resize', function() {
-        if(window.innerHeight + 50 < initialWindowHeight) {
-          pageNav.style.display = 'none'
-        } else if (pathname !== 'login' && pathname !== 'signup' ) {
-          pageNav.style.display = 'block'
-        }
-      })
+    if(pathname !== 'login' && pathname !== 'signup' && pathname !== 'messaging' && pathname !== null) {
+      if('visualViewport' in window) {
+        window.visualViewport.addEventListener('resize', function() {
+          if(window.innerHeight + 50 < initialWindowHeight) {
+            pageNav.style.display = 'none'
+          } else if (pathname !== 'login' && pathname !== 'signup' ) {
+            pageNav.style.display = 'block'
+          }
+        })
+      }
     }
   }, [pathname])
 

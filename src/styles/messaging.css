@@ -1,11 +1,17 @@
 .messaging {
   width: 100%;
   max-width: 600px;
+  min-height: 100vh;
+}
+
+.messaging .message__cont {
+  background-color: white;
+  height: 100%;
+  padding: 0;
 }
 
 .messaging .message {
-  background-color: white;
-  min-height: calc(100vh - 50px);
+  height: 100%;
 }
 
 .messaging .message__searchPal {
