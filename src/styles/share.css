@@ -77,10 +77,3 @@
   object-fit: cover;
   border-radius: 0.5rem;
 }
-
-@media (min-width: 500px) {
-  .share {
-    /* border-radius: 10px; */
-    margin-top: 10px;
-  }
-}

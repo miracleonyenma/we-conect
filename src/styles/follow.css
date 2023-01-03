@@ -1,5 +1,11 @@
 .follow {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.follow .followCard__cont {
+  max-width: 600px;
 }
 
 .follow .followCard{
