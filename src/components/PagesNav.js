@@ -1,99 +1,113 @@
-import '../styles/pagesNav.css'
+import "../styles/pagesNav.css";
 import {
-  EmailOutlined, 
-  PermIdentityOutlined, 
+  EmailOutlined,
+  PermIdentityOutlined,
   OtherHousesOutlined,
   PeopleAltOutlined,
   OtherHouses,
   Email,
   Add,
   PeopleAlt,
-  Person
-} from '@mui/icons-material';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+  Person,
+} from "@mui/icons-material";
+import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-function PagesNav({rotate=false, setModalOpened}) {
-
-  const [locationChanged, setLocationChanged] = useState(false)
-  const [pathname, setPathname] = useState(null)
+function PagesNav({ rotate = false, setModalOpened }) {
+  const [locationChanged, setLocationChanged] = useState(false);
+  const [pathname, setPathname] = useState(null);
 
   // get the URL pathname and set in the state
   useEffect(() => {
-    if(locationChanged || true) {
-      const pathname = window.location.pathname
-      setPathname(pathname.slice(1, pathname.length))
+    if (locationChanged || true) {
+      const pathname = window.location.pathname;
+      setPathname(pathname.slice(1, pathname.length));
     }
-  }, [locationChanged])
+  }, [locationChanged]);
 
   // remove bottom page nav when a the windows height becomes smaller particularly when a virtual keyboard is displayed
   useEffect(() => {
-    const pageNav = document.querySelector(".pageNavAlt")
-    const initialWindowHeight = window.innerHeight
-    if(pathname !== 'login' && pathname !== 'signup' && pathname !== 'messaging' && pathname !== null) {
-      if('visualViewport' in window) {
-        window.visualViewport.addEventListener('resize', function() {
-          if(window.innerHeight + 50 < initialWindowHeight) {
-            pageNav.style.display = 'none'
-          } else if (pathname !== 'login' && pathname !== 'signup' ) {
-            pageNav.style.display = 'block'
+    const pageNav = document.querySelector(".pageNavAlt");
+    const initialWindowHeight = window.innerHeight;
+    if (
+      pathname !== "login" &&
+      pathname !== "signup" &&
+      pathname !== "messaging" &&
+      pathname !== null
+    ) {
+      if ("visualViewport" in window) {
+        window.visualViewport.addEventListener("resize", function () {
+          if (window.innerHeight + 50 < initialWindowHeight) {
+            pageNav.style.display = "none";
+          } else if (pathname !== "login" && pathname !== "signup") {
+            pageNav.style.display = "block";
           }
-        })
+        });
       }
     }
-  }, [pathname])
+  }, [pathname]);
 
   return (
-    <div className={`pagesNav ${rotate ? 'pagesNavVertical' : 'pageNavAlt'}`} id='pageNav'>
-      <div className='pagesNav__container'>
-        <Link 
-          to='/' 
-          className='pagesNav__action' 
+    <div
+      className={`pagesNav ${rotate ? "pagesNavVertical" : "pageNavAlt"}`}
+      id="pageNav"
+    >
+      <div className="pagesNav__container">
+        <Link
+          to="/"
+          className="pagesNav__action"
           onClick={() => setLocationChanged(!locationChanged)}
         >
-          {pathname === ''
-            ? <OtherHouses />
-            : <OtherHousesOutlined />
-          }
+          {pathname === "" ? (
+            <OtherHouses className="icon" />
+          ) : (
+            <OtherHousesOutlined className="icon"/>
+          )}
         </Link>
-        <Link 
-          to='/messaging' 
-          className='pagesNav__action remove' 
+        <Link
+          to="/messaging"
+          className="pagesNav__action remove"
           onClick={() => setLocationChanged(!locationChanged)}
         >
-          {pathname === 'messaging'
-            ? <Email />
-            : <EmailOutlined />
-          }
+          {pathname === "messaging" ? (
+            <Email className="icon" />
+          ) : (
+            <EmailOutlined className="icon" />
+          )}
         </Link>
-        <Link 
-          to='/followers' 
-          className='pagesNav__action'  
+        <Link
+          to="/followers"
+          className="pagesNav__action"
           onClick={() => setLocationChanged(!locationChanged)}
         >
-          {pathname === 'followers'
-            ? <PeopleAlt />
-            : <PeopleAltOutlined />
-          }
+          {pathname === "followers" ? (
+            <PeopleAlt className="icon" />
+          ) : (
+            <PeopleAltOutlined className="icon" />
+          )}
         </Link>
-        <Link 
-          to='/profile' 
-          className='pagesNav__action' 
+        <Link
+          to="/profile"
+          className="pagesNav__action"
           onClick={() => setLocationChanged(!locationChanged)}
         >
-          {pathname === 'profile'
-            ? <Person />
-            : <PermIdentityOutlined />
-          }
+          {pathname === "profile" ? (
+            <Person className="icon" />
+          ) : (
+            <PermIdentityOutlined className="icon" />
+          )}
         </Link>
-        {rotate &&
-          <Link className='pagesNav__action addPost' onClick={() => setModalOpened(true)}>
+        {rotate && (
+          <Link
+            className="pagesNav__action addPost"
+            onClick={() => setModalOpened(true)}
+          >
             <Add />
           </Link>
-        }
+        )}
       </div>
     </div>
-  )
+  );
 }
 
-export default PagesNav
+export default PagesNav;
